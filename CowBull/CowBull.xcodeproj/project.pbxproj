@@ -11,6 +11,7 @@
 		E5010F0B281213A900C679BC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5010F0A281213A900C679BC /* ContentView.swift */; };
 		E5010F0D281213AA00C679BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5010F0C281213AA00C679BC /* Assets.xcassets */; };
 		E5010F10281213AA00C679BC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5010F0F281213AA00C679BC /* Preview Assets.xcassets */; };
+		E50F2CB428139D02009A6BFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50F2CB328139D02009A6BFC /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		E5010F0C281213AA00C679BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5010F0F281213AA00C679BC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E5010F11281213AA00C679BC /* CowBull.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CowBull.entitlements; sourceTree = "<group>"; };
+		E50F2CB328139D02009A6BFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				E5010F08281213A900C679BC /* CowBullApp.swift */,
+				E50F2CB328139D02009A6BFC /* AppDelegate.swift */,
 				E5010F0A281213A900C679BC /* ContentView.swift */,
 				E5010F0C281213AA00C679BC /* Assets.xcassets */,
 				E5010F11281213AA00C679BC /* CowBull.entitlements */,
@@ -139,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E50F2CB428139D02009A6BFC /* AppDelegate.swift in Sources */,
 				E5010F0B281213A900C679BC /* ContentView.swift in Sources */,
 				E5010F09281213A900C679BC /* CowBullApp.swift in Sources */,
 			);

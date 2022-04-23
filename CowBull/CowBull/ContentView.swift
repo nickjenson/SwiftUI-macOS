@@ -40,7 +40,9 @@ struct ContentView: View {
         .alert("You win!", isPresented: $isGameOver) {
             Button("OK", action: startNew)
         } message: {
-            Text("Congratulations! Click OK to play again.")
+            let score = guesses.count
+            Text("Score: \(score). \(performance(score: score))! Click OK to play again.")
+            
         }
         // simple touchbar view
         .touchBar {
@@ -65,14 +67,15 @@ struct ContentView: View {
     func submit() {
         guard Set(guess).count == 4 else { return }
         guard guess.count == 4 else { return }
+        
+        // do not accept duplicates in guesses
+        guard !guesses.contains(guess) else { return }
+        
         // only want chars "0123456789", so we want to exclude everything else
         let badChars = CharacterSet(charactersIn: "0123456789").inverted
         guard guess.rangeOfCharacter(from: badChars) == nil else {
             return
         }
-        
-        // not accept duplicates
-        guard !guesses.contains(guess) else { return }
         
         withAnimation {
             guesses.insert(guess, at: 0)
@@ -99,6 +102,16 @@ struct ContentView: View {
             }
         }
         return "\(bulls)b \(cows)c"
+    }
+    // change message based on how well player performed
+    func performance(score: Int) -> String {
+        if score < 10 {
+            return "That was fast"
+        } else if score < 20 {
+            return "That was pretty good"
+        } else {
+            return "Eh. Better luck next time"
+        }
     }
 }
 
